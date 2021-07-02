@@ -1,24 +1,104 @@
+@font-face {
+  font-family: 'Helvetica bold';
+  src: url(./fonts/Helvetica-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url(./fonts/Helvetica.ttf);
+}
+
 body {
   padding: 0;
   margin: 0;
-
+  font-family: 'Helvetica';
 }
 
 .logo {
-  width: 80px;
+  width: 220px;
+}
+
+.App {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .navbar-container {
-  margin-left: 80px;
-  margin-right: 80px;
   display: flex;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  justify-content: center;
+  margin: auto;
+}
+
+.navbar {
+  width: 85%;
 }
 
 .navbar-links-container {
   display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .navbar-link {
-  margin: 10px;
-  font-weight: 600;
+  margin: 20px;
+  color: #fff;
+  font-size: 1.1rem;
 }
+
+.navbar-link:hover {
+  color: rgb(255, 212, 121);
+  cursor: pointer;
+}
+
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(93, 91, 91);
+}
+
+/* .video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  position: absolute;
+} */
+
+.home-page-text-slogan-container {
+  width: 800px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.home-page-text-slogan {
+  color: rgb(255, 255, 255);
+  font-size: 3.5rem;
+  font-weight: bolder;
+  font-family: 'Helvetica bold';
+
+}
+
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+
