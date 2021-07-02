@@ -2,8 +2,8 @@ import React from 'react'
 
 const SecondPage = () => {
     return (
-        <div className="section" id="second-page">
-            <p>second page</p>
+        <div className="section" id="about">
+            <p>About</p>
         </div>
     )
 }
