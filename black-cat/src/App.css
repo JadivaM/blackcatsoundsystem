@@ -1,7 +1,12 @@
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+}
 
+@font-face {
+  font-family: 'Helvetica bold';
+  src: url(./fonts/Helvetica-Bold.ttf);
 }
 
 .logo {
@@ -12,6 +17,10 @@ body {
   margin-left: 80px;
   margin-right: 80px;
   display: flex;
+  top: 0;
+  /* left: 0; */
+  position: fixed;
+  z-index: 10;
 }
 
 .navbar-links-container {
@@ -21,4 +30,46 @@ body {
 .navbar-link {
   margin: 10px;
   font-weight: 600;
+}
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  /* left: 0; */
+  position: absolute;
+}
+
+.home-page-text-slogan-container {
+  width: 800px;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+.home-page-text-slogan {
+  color: rgb(255, 255, 255);
+  font-size: 3.5rem;
+  font-weight: bolder;
+  font-family: 'Helvetica bold';
+
+}
+
+
+
+.section {
+  width: 100vw;
+  height: 100vh;
 }
