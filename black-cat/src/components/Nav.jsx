@@ -9,7 +9,7 @@ const Nav = () => {
         <div className="navbar-container">
           <Navbar
         collapseOnSelect
-        expand="sm"
+        expand="lg"
         className="navbar"
         bg="navbar"
         variant="dark"
@@ -20,17 +20,16 @@ const Nav = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <div className="navbar-links-container">
-            <Link smooth to="/#home"
-            >
+          <Link smooth to="/#home" id='text-link'>
             <p className="navbar-link">Home</p>
             </Link>
-            <Link smooth to="/#about">
+            <Link smooth to="/#about" id='text-link'>
             <p className="navbar-link">About</p>
             </Link>
-            <Link smooth to="/#contact">
+            <Link smooth to="/#contact" id='text-link'>
             <p className="navbar-link">Contact</p>
             </Link>
-            <Link smooth to="/#events">
+            <Link smooth to="/#events" id='text-link'>
             <p className="navbar-link">Events</p>
             </Link>
           </div>
