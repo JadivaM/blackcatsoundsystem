@@ -36,10 +36,11 @@ body {
   justify-content: center;
   margin: auto;
   background: transparent;
+  transition: 0.2s;
 }
 
 .navbar-container.active {
-  background-color: #000;
+  background-color: #121212;
 }
 
 .navbar {
@@ -71,7 +72,7 @@ body {
 }
 
 .navbar-link:hover {
-  border-bottom: rgb(246, 189, 65) 4px solid;
+  border-bottom: #FEAA3D 4px solid;
 }
 
 #text-link {
@@ -108,6 +109,9 @@ body {
   font-family: 'Metropolis semi-bold';
 }
 
+#mobile-contact-button {
+  display: none;
+}
 
 .section {
   height: 100vh;
@@ -119,31 +123,39 @@ body {
 
 @media only screen and (max-width: 425px) {
   .logo {
-    height: 50px;
+    height: 30px;
   }
   .navbar {
-    height: 70px;
+    height: 50px;
     width: 100%;
   }
   .navbar-container {
-    background-color: #000;
+    background-color: transparent;
   }
   .home-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(./images/mobile-hero-image.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(./images/mobile-hero-image.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; 
+    background-size:  400px 250px;
+    /* background-size:  cover; */
+    background-position: top; 
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* background-color: #000; */
   }
   .home-page-text-slogan-container {
-    width: 300px;
+    width: 280px;
+    height: auto;
+    position: absolute;
+    top: 400px;
   }
   .home-page-text-slogan {
-    font-size: 2.2rem;
-    margin: auto;
+    font-size: 2.1rem;
+    color: #000;
   }
   .navbar-links-container {
     flex-direction: column;
-    background-color: #000;
+    background-color: #121212;
     width: 100vw;
     position: relative;
   }
@@ -151,4 +163,13 @@ body {
     font-size: 1rem;
 
   }
+  #mobile-contact-button {
+    display: block;
+    background-color: #FEAA3D;
+    box-shadow: none;
+    border: none;
+    color: #000;
+    width: 130px;
+    font-family: 'Metropolis semi-bold';
+}
 }
