@@ -1,27 +1,29 @@
 @font-face {
-  font-family: 'Helvetica bold';
-  src: url(./fonts/Helvetica-Bold.ttf);
+  font-family: 'Metropolis bold';
+  src: url(./fonts/Metropolis-Bold.otf);
 }
 
 @font-face {
-  font-family: 'Helvetica';
-  src: url(./fonts/Helvetica.ttf);
+  font-family: 'Metropolis semi-bold';
+  src: url(./fonts/Metropolis-SemiBold.otf);
+}
+
+@font-face {
+  font-family: 'Metropolis regular';
+  src: url(./fonts/Metropolis-Regular.otf);
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica';
+  font-family: 'Metropolis regular';
 }
 
 .logo {
-  width: 220px;
+  height: 70px;
 }
 
 .App {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -33,37 +35,59 @@ body {
   width: 100vw;
   justify-content: center;
   margin: auto;
+  background: transparent;
+}
+
+.navbar-container.active {
+  background-color: #000;
 }
 
 .navbar {
-  width: 85%;
+  width: 80%;
+  height: 75px;
 }
 
 .navbar-links-container {
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  color: #fff;
 }
 
 .navbar-link {
-  margin: 20px;
-  color: #fff;
+  margin: 10px;
   font-size: 1.1rem;
+  font-family: 'Metropolis semi-bold';
+  border-bottom: 4px solid transparent;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  transition: 0.2s;
 }
 
 .navbar-link:hover {
-  color: rgb(255, 212, 121);
+  border-bottom: #FEAA3D 4px solid;
   cursor: pointer;
 }
 
+.navbar-link:hover {
+  border-bottom: rgb(246, 189, 65) 4px solid;
+}
+
+#text-link {
+  color: inherit;
+  text-decoration: none;
+}
 
 .home-container {
   width: 100vw;
   height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(./images/hero-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
-  background-color: rgb(93, 91, 91);
+  background-position: 0 55%; 
 }
-
 
 
 .home-page-text-slogan-container {
@@ -79,10 +103,9 @@ body {
 
 .home-page-text-slogan {
   color: rgb(255, 255, 255);
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bolder;
-  font-family: 'Helvetica bold';
-
+  font-family: 'Metropolis semi-bold';
 }
 
 
@@ -91,15 +114,41 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
 }
 
-.video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  position: fixed;
+
+@media only screen and (max-width: 425px) {
+  .logo {
+    height: 50px;
+  }
+  .navbar {
+    height: 70px;
+    width: 100%;
+  }
+  .navbar-container {
+    background-color: #000;
+  }
+  .home-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(./images/mobile-hero-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+  }
+  .home-page-text-slogan-container {
+    width: 300px;
+  }
+  .home-page-text-slogan {
+    font-size: 2.2rem;
+    margin: auto;
+  }
+  .navbar-links-container {
+    flex-direction: column;
+    background-color: #000;
+    width: 100vw;
+    position: relative;
+  }
+  .navbar-link {
+    font-size: 1rem;
+
+  }
 }
