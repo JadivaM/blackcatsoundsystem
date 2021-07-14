@@ -42,11 +42,11 @@ window.addEventListener("scroll", changeBackground);
             <Link smooth to="/#about" id='text-link'>
             <p className="navbar-link">About</p>
             </Link>
+            <Link smooth to="/#events" id='text-link'>
+            <p className="navbar-link">Services</p>
+            </Link>
             <Link smooth to="/#contact" id='text-link'>
             <p className="navbar-link">Contact</p>
-            </Link>
-            <Link smooth to="/#events" id='text-link'>
-            <p className="navbar-link">Events</p>
             </Link>
             </Nav> 
           </Navbar.Collapse>
