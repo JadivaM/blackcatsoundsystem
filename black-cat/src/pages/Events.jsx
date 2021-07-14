@@ -1,7 +1,6 @@
 import React from 'react';
 import cat from '../images/cat.png';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import musicIcon from '../images/song.svg';
 import soundsystem from '../images/sound.png';
@@ -33,7 +32,7 @@ const Events = () => {
                 <CardContent>
                 <img className="card-icon" src={soundIcon} alt="icon"/>
                 <p className="card-text">
-                Maintaining quality sound throughout events & connecting people through music
+                Ensuring and maintaining quality sound throughout events
                 </p>
                 </CardContent>
             </Card>
