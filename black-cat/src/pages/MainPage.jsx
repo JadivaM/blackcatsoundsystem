@@ -9,8 +9,8 @@ const MainPage = () => {
         <div>
         <Home />
         <About />
-        <Contact />
         <Events />
+        <Contact />
         </div>
     )
 }

@@ -27,6 +27,10 @@ body {
   overflow-x: hidden;
 }
 
+.mobile-hero-image-section {
+  display: none;
+}
+
 .navbar-container {
   display: flex;
   top: 0;
@@ -71,9 +75,6 @@ body {
   cursor: pointer;
 }
 
-.navbar-link:hover {
-  border-bottom: #FEAA3D 4px solid;
-}
 
 #text-link {
   color: inherit;
@@ -83,6 +84,9 @@ body {
 .home-container {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(./images/hero-image.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,16 +94,19 @@ body {
   background-position: 0 55%; 
 }
 
+.mobile-hero-image-section {
+  display: block;
+}
+
 
 .home-page-text-slogan-container {
-  width: 800px;
+  width: 50%;
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-
 }
 
 .home-page-text-slogan {
@@ -113,11 +120,150 @@ body {
   display: none;
 }
 
-.section {
-  height: 100vh;
+#about {
+  position: relative;
+}
+
+.about-heading-text {
+  font-family: 'Metropolis semi-bold';
+  text-align: center;
+  padding: 5% 0 5% 0;
+}
+
+.about-information-container {
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo, .about-text {
+  height: auto;
+  margin: 0 2% 0 2%;
+  width: 30%;
+}
+
+#events {
+  position: relative;
+}
+
+.black-cat {
+  width: 20%;
+  display: inline;
+  position: absolute;
+  top: -350px;
+  right: 0;
+}
+
+.services-cards-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.services-card {
+  width: 20%;
+  height: 200px;
+  height: auto;
+  margin: 0 20px 0 20px;
+  background-color: rgba(169, 169, 169, 0.712);
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Metropolis regular';
+  padding: 5px 0 5px 0;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 15%;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 90vw;
+  height: 90vh;
+  padding: 5% 0 5% 0;
+}
+
+.contact-us-form-container, .contact-us-information-container {
+  width: 50%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.contact-image {
+  width: 60%;
+  height: 70%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.contact-heading-hit-us-up{
+  width: 25%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.contact-heading-hit-us-up, .contact-heading {
+  font-family: 'Metropolis semi-bold';
+  border-bottom: #FEAA3D 4px solid;
+}
+
+.contact-heading {
+  width: 10%;
+  text-align: center;
+}
+
+.contact-text, .contact-heading, .contact-icon-container {
+  margin: auto;
+}
+
+.contact-icon {
+  margin: 0 10px 0 10px;
+}
+
+.contact-us-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-text-field {
+  padding-bottom: 40px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.contact-form-submit-button {
+  background-color: #FEAA3D;
+  box-shadow: none;
+  border: none;
+  color: #000;
+  width: 20%;
+  padding: 1%;
+  border-radius: 5px;
+  font-family: 'Metropolis semi-bold';
+  margin: auto;
+}
+
+.section {
+  height: 100vh;
 }
 
 
@@ -133,25 +279,35 @@ body {
     background-color: transparent;
   }
   .home-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(./images/mobile-hero-image.png);
-    background-repeat: no-repeat;
-    background-size:  400px 250px;
-    /* background-size:  cover; */
-    background-position: top; 
     width: 100vw;
     height: 100vh;
     position: relative;
-    /* background-color: #000; */
+    background-image: none;
   }
+
+  .mobile-hero-image-section {
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    top: 0;
+    display: block;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url(./images/hero-image.png);
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-position: top; 
+  }
+
   .home-page-text-slogan-container {
-    width: 300px;
+    width: 100vw;
     height: auto;
     position: absolute;
-    top: 300px;
+    top: 320px;
   }
   .home-page-text-slogan {
-    font-size: 2.1rem;
+    text-align: center;
+    font-size: 1.9rem;
     color: #000;
+   
   }
   .navbar-links-container {
     flex-direction: column;
@@ -164,12 +320,15 @@ body {
 
   }
   #mobile-contact-button {
+
     display: block;
     background-color: #FEAA3D;
     box-shadow: none;
     border: none;
     color: #000;
     width: 130px;
+    padding: 5%;
+    border-radius: 5px;
     font-family: 'Metropolis semi-bold';
 }
 }

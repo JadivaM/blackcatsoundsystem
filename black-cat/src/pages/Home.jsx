@@ -1,15 +1,20 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-
+import { NavHashLink as Link } from "react-router-hash-link";
 
 const Home = () => {
     return (
         <div className="section home-container" id="home">
+            <div className="mobile-hero-image-section">
             <div className="home-page-text-slogan-container">
-            <p className="home-page-text-slogan">Bringing Sound System Culture to South Florida</p>
-            <Button id="mobile-contact-button">Contact us
-            </Button>
+            <h1 className="home-page-text-slogan">Bringing Sound System Culture to South Florida</h1>
+            <Link smooth to="/#contact">
+            <button id="mobile-contact-button">Contact us
+            </button>
+            </Link>
+            
             </div>
+            </div>
+            
         </div>
     )
 }
