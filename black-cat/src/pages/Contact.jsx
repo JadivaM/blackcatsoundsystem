@@ -4,10 +4,11 @@ import CardContent from '@material-ui/core/CardContent';
 import contactImage from '../images/contact-image.jpg';
 import TextField from '@material-ui/core/TextField';
 import CardActions from '@material-ui/core/CardActions';
-import Button from '@material-ui/core/Button';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { black } from '@material-ui/core/colors';
+import { Link } from 'react-router-dom';
+
 import {
     withStyles,
   } from '@material-ui/core/styles';
@@ -42,8 +43,12 @@ const Contact = () => {
         <p className="contact-text">contact@blackcatsoundsystem.com</p>
         <p className="contact-text">(954)873-1170</p>
         <div className="contact-icon-container">
+        <Link to={{ pathname: "https://www.facebook.com/blackcatsoundsystems/"}} target="_blank" style={{color: "#000"}}>
         <FacebookIcon className="contact-icon"/>
+        </Link>
+        <Link to={{ pathname: "https://www.instagram.com/blackcatsoundsystem"}} target="_blank" style={{color: "#000"}}>
         <InstagramIcon className="contact-icon"/>
+        </Link>
         </div>
         </div>           
         <Card className="contact-us-form-container" variant="outlined">
@@ -78,7 +83,7 @@ const Contact = () => {
           label="Your message"
           fullWidth
           multiline
-          rows={4}
+          rows={5}
           variant="filled"
           required
         />
@@ -86,7 +91,7 @@ const Contact = () => {
         </form>
       </CardContent>
       <CardActions>
-        <Button size="small">Send message</Button>
+        <button type="submit" className="contact-form-submit-button">Send message</button>
       </CardActions>
     </Card>
     </div>

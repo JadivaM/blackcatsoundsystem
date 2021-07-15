@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import { NavHashLink as Link } from "react-router-hash-link";
 
 const Home = () => {
@@ -9,8 +8,8 @@ const Home = () => {
             <div className="home-page-text-slogan-container">
             <h1 className="home-page-text-slogan">Bringing Sound System Culture to South Florida</h1>
             <Link smooth to="/#contact">
-            <Button id="mobile-contact-button">Contact us
-            </Button>
+            <button id="mobile-contact-button">Contact us
+            </button>
             </Link>
             
             </div>
