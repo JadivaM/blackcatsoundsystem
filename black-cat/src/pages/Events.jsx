@@ -3,7 +3,7 @@ import cat from '../images/cat.png';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import musicIcon from '../images/song.svg';
-import soundsystem from '../images/sound.png';
+import soundsystem from '../images/soundsystem.png';
 import soundIcon from '../images/sound.svg';
 
 const Events = () => {
