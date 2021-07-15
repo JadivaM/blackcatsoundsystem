@@ -7,6 +7,31 @@ import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import { black } from '@material-ui/core/colors';
+import {
+    withStyles,
+  } from '@material-ui/core/styles';
+
+
+  const CssTextField = withStyles({
+    root: {
+        '& label.Mui-focused': {
+            color: 'black',
+          },
+          '& .MuiFilledInput-underline:after': {
+            borderBottomColor: 'black',
+          },
+      '& .MuiFilledInput-root': {
+        '& fieldset': {
+          borderColor: 'black',
+        },
+        '&.Mui-focused fieldset': {
+          borderColor: 'black',
+        },
+      },
+    },
+  })(TextField);
+
 
 const Contact = () => {
     return (
@@ -26,33 +51,36 @@ const Contact = () => {
             <CardContent>
             <form className="contact-us-form">
             <div className="contact-text-field">
-                <TextField
+                <CssTextField
                 id="filled-multiline-flexible"
                 label="Name"
                 multiline
                 fullWidth
                 maxRows={4}
                 variant="filled"
+                required
             />
             </div>
         <div className="contact-text-field">
-        <TextField
+        <CssTextField
           id="filled-multiline-flexible"
           label="Email address"
           multiline
           fullWidth
           maxRows={4}
           variant="filled"
+          required
         />
         </div>
        <div className="contact-text-field message-field">
-       <TextField
+       <CssTextField
           id="filled-multiline-flexible"
           label="Your message"
           fullWidth
           multiline
           rows={4}
           variant="filled"
+          required
         />
        </div>
         </form>
