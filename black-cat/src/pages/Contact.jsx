@@ -38,18 +38,13 @@ import {
 
 const Contact = () => {
 
-
-  const SERVICE_ID = process.env.REACT_APP_EMAIL_JS_SERVICE_ID;
-  const TEMPLATE_ID = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID;
-  const USER_ID = process.env.REACT_APP_EMAIL_JS_USER_ID;
-
   const sendEmail = (e) => {
     e.preventDefault();
-      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-      .then(function(response) {
+      emailjs.sendForm('service_iaxno1t', 'template_17zqf7m', e.target, 'user_jMNc9Tqke5LnkXIe5lxiZ')
+      .then(res => {
         toast.dark('✅ Success, message sent!') 
          e.target.reset();
-      }, function(error) {
+      }).catch(error => {
         toast.error('Oops! We ecountered a problem. Please try again.') 
       });
 }
