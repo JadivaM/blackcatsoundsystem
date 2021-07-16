@@ -1,5 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
+import { toast, ToastContainer } from 'react-toastify';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import contactImage from '../images/contact-image.jpg';
@@ -47,10 +48,10 @@ const Contact = () => {
     console.log('sent');
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then(function(response) {
-         console.log('SUCCESS!', response.status, response.text);
+        toast.dark('✅ Success, message sent!') 
          e.target.reset();
       }, function(error) {
-         console.log('FAILED...', error);
+        toast.error('Oops! We ecountered a problem. Please try again.') 
       });
 }
 
@@ -117,8 +118,17 @@ const Contact = () => {
       </CardActions>
         </form>
       </CardContent>
- 
     </Card>
+    <ToastContainer
+        position="bottom-right"
+        autoClose={10000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        />
     </div>
     )
 }
