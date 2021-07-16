@@ -299,13 +299,13 @@ body {
 
   .home-page-text-slogan-container {
     width: 100vw;
+    text-align: center;
     height: auto;
     position: absolute;
     top: 320px;
   }
   .home-page-text-slogan {
-    text-align: center;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     color: #000;
    
   }

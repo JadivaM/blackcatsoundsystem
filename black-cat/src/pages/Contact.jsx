@@ -1,4 +1,6 @@
 import React from 'react';
+import emailjs from 'emailjs-com';
+import { toast, ToastContainer } from 'react-toastify';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import contactImage from '../images/contact-image.jpg';
@@ -35,6 +37,26 @@ import {
 
 
 const Contact = () => {
+
+
+  const SERVICE_ID = process.env.REACT_APP_EMAIL_JS_SERVICE_ID;
+  const TEMPLATE_ID = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID;
+  const USER_ID = process.env.REACT_APP_EMAIL_JS_USER_ID;
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log('sent');
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+      .then(function(response) {
+        toast.dark('✅ Success, message sent!') 
+         e.target.reset();
+      }, function(error) {
+        toast.error('Oops! We ecountered a problem. Please try again.') 
+      });
+}
+
+
+
     return (
         <div className="section" id="contact"> 
         <div className="contact-us-information-container">
@@ -54,7 +76,7 @@ const Contact = () => {
         <Card className="contact-us-form-container" variant="outlined">
             <h1 className="contact-heading-hit-us-up">Hit Us Up</h1>
             <CardContent>
-            <form className="contact-us-form">
+            <form className="contact-us-form" onSubmit={sendEmail}>
             <div className="contact-text-field">
                 <CssTextField
                 id="filled-multiline-flexible"
@@ -64,6 +86,7 @@ const Contact = () => {
                 maxRows={4}
                 variant="filled"
                 required
+                name="name"
             />
             </div>
         <div className="contact-text-field">
@@ -75,6 +98,7 @@ const Contact = () => {
           maxRows={4}
           variant="filled"
           required
+          name="email"
         />
         </div>
        <div className="contact-text-field message-field">
@@ -86,14 +110,25 @@ const Contact = () => {
           rows={5}
           variant="filled"
           required
+          name="message"
         />
        </div>
-        </form>
-      </CardContent>
-      <CardActions>
+       <CardActions>
         <button type="submit" className="contact-form-submit-button">Send message</button>
       </CardActions>
+        </form>
+      </CardContent>
     </Card>
+    <ToastContainer
+        position="bottom-right"
+        autoClose={10000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        />
     </div>
     )
 }
