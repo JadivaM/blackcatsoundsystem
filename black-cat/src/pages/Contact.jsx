@@ -45,7 +45,6 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log('sent');
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then(function(response) {
         toast.dark('✅ Success, message sent!') 
