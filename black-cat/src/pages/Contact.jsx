@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
 import Card from '@material-ui/core/Card';
@@ -38,14 +38,25 @@ import {
 
 const Contact = () => {
 
+  const [isValid, setIsValid] = useState(true);
+
+  const checkEmail = (e) => {
+    const emailValid = e.target.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+   if (emailValid) {
+     setIsValid(true)
+} else {
+  setIsValid(false)
+}
+  }
+
   const sendEmail = (e) => {
     e.preventDefault();
-      emailjs.sendForm('service_iaxno1t', 'template_17zqf7m', e.target, 'user_jMNc9Tqke5LnkXIe5lxiZ')
-      .then(res => {
+    if(isValid === true)
+      emailjs.sendForm('service_iaxno1t', 'template_17zqf7m', e.target, 'user_jMNc9Tqke5LnkXIe5lxiZ').then(res => {
         toast.dark('✅ Success, message sent!') 
          e.target.reset();
       }).catch(error => {
-        toast.error('Oops! We ecountered a problem. Please try again.') 
+          toast.error('Oops! We ecountered a problem. Please try again.') 
       });
 }
 
@@ -84,7 +95,8 @@ const Contact = () => {
             />
             </div>
         <div className="contact-text-field">
-        <CssTextField
+
+      {isValid ? <CssTextField
           id="filled-multiline-flexible"
           label="Email address"
           multiline
@@ -93,7 +105,24 @@ const Contact = () => {
           variant="filled"
           required
           name="email"
-        />
+          onChange={checkEmail}
+        /> : <CssTextField
+        error
+        id="filled-error"
+        label="Email address"
+        multiline
+        fullWidth
+        maxRows={4}
+        required
+        helperText="Invalid email address"
+        variant="filled"
+        onChange={checkEmail}
+      /> }
+
+       
+
+        
+
         </div>
        <div className="contact-text-field message-field">
        <CssTextField
