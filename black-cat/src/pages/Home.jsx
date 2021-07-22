@@ -7,7 +7,7 @@ const Home = () => {
             <div className="mobile-hero-image-section">
             <div className="home-page-text-slogan-container">
             <h1 className="home-page-text-slogan">Bringing Sound System Culture to South Florida</h1>
-            <Link smooth to="/#contact">
+            <Link smooth to="/#contact" style={{textDecoration: 'none'}}>
             <button id="mobile-contact-button">Contact us
             </button>
             </Link>
