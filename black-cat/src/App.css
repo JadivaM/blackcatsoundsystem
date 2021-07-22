@@ -20,7 +20,7 @@ body {
 }
 
 .logo {
-  height: 70px;
+  height: 60px;
 }
 
 .App {
@@ -111,7 +111,7 @@ body {
 
 .home-page-text-slogan {
   color: rgb(255, 255, 255);
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: bolder;
   font-family: 'Metropolis semi-bold';
 }
@@ -174,9 +174,8 @@ body {
 
 .card-text {
   font-size: 1rem;
-  font-weight: 600;
   font-family: 'Metropolis regular';
-  padding: 5px 0 5px 0;
+  padding: 15px 0 5px 0;
 }
 
 .card-icon {
@@ -348,6 +347,71 @@ body {
 }
 
  @media only screen and (max-width: 991.98px) {
+  .logo {
+    height: 42px;
+  }
+
+  .navbar {
+    width: 90%;
+    height: 60px;
+  }
+
+  .home-container {
+    background-position: center; 
+  }
+
+  .home-page-text-slogan {
+    font-size: 2.5rem;
+  }
+
+  .black-cat {
+    top: -190px;
+  }
+
+  .about-information-container {
+    display: block;
+  }
+  
+  .about-photo, .about-text {
+    margin: auto;
+  }
+
+  .about-text  {
+    padding-top: 3%;
+    width: 60%;
+  }
+  
+  .about-photo {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 60%;
+  }
+
+  .about-heading-text {
+    padding: 10% 0 7% 0;
+  }
+
+  .services-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .services-card {
+    width: 55%;
+    height: 150px;
+    margin-bottom: 10%;
+  }
+  
+  .card-text {
+    padding-top: 20px;
+  }
+  
+  .card-icon {
+    width: 10%;
+  }
+
   #contact {
     display: block;
   }
@@ -377,10 +441,6 @@ body {
     width: 25%;
     padding-top: 20px;
   }
-/*   
-  .contact-icon {
-    margin: 0 10px 0 10px;
-  } */
 
   .contact-text-field {
     padding-bottom: 30px;
@@ -392,14 +452,95 @@ body {
  }
 
 @media only screen and (max-width: 767.98px) {
-  .logo {
-    border: green 1px solid;
+  .black-cat {
+    top: -160px;
+  }
+
+  .about-information-container {
+    display: block;
+  }
+  
+  .about-photo, .about-text {
+    margin: auto;
+  }
+
+  .about-text  {
+    padding-top: 3%;
+    width: 60%;
+  }
+  
+  .about-photo {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    width: 60%;
+  }
+
+  .about-heading-text {
+    padding: 10% 0 7% 0;
+  }
+
+  .services-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .services-card {
+    width: 55%;
+    height: 150px;
+    margin-bottom: 10%;
+  }
+  
+  .card-text {
+    padding-top: 15px;
+  }
+  
+  .card-icon {
+    width: 10%;
+  }
+
+  #contact {
+    display: block;
+  }
+  
+  .contact-us-form-container {
+    width: 100%;
+    height: 80%;
+  }
+  
+  .contact-us-information-container {
+    height: 20%;
+  }
+  
+  .contact-image {
+    display: none;
+  }
+  
+  .contact-heading-hit-us-up{
+    width: 40%;
+  }
+  
+  .contact-heading-hit-us-up, .contact-heading {
+    border-bottom: #FEAA3D 3px solid;
+  }
+  
+  .contact-heading {
+    width: 25%;
+    padding-top: 20px;
+  }
+
+  .contact-text-field {
+    padding-bottom: 30px;
+  }
+  
+  .contact-form-submit-button {
+    padding: 1.2%;
   }
 
 }
 
-@media screen 
-  and (max-width: 425px) {
+@media (max-width: 575.98px) {
   .logo {
     height: 30px;
   }
@@ -426,7 +567,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url(./images/hero-image.png);
     background-repeat: no-repeat;
     background-size:  cover;
-    background-position: top; 
+    background-position: center; 
   }
 
   .home-page-text-slogan-container {
@@ -462,5 +603,98 @@ body {
     padding: 5%;
     border-radius: 5px;
     font-family: 'Metropolis semi-bold';
+}
+
+.black-cat {
+  display: none;
+}
+
+.about-information-container {
+  display: block;
+}
+
+.about-photo, .about-text {
+  margin: auto;
+}
+
+.about-text  {
+  padding-top: 3%;
+  width: 85%;
+  font-size: 0.9rem;
+}
+
+.about-photo {
+  display: flex;
+  justify-content: center;
+  height: 170px;
+  width: 70%;
+}
+
+.about-heading-text {
+  padding: 15% 0 5% 0;
+  font-size: 1.5rem;
+}
+
+.services-cards-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.services-card {
+  width: 60%;
+  height: 150px;
+  margin-bottom: 10%;
+}
+
+.card-text {
+  padding-top: 15px;
+}
+
+.card-icon {
+  width: 12%;
+}
+
+#contact {
+  display: block;
+}
+
+.contact-us-form-container {
+  width: 100%;
+  height: 80%;
+}
+
+.contact-us-information-container {
+  height: 20%;
+}
+
+.contact-image {
+  display: none;
+}
+
+.contact-heading-hit-us-up{
+  width: 50%;
+  font-size: 2rem;
+  margin-top: 20%;
+  margin-bottom: 0;
+}
+
+.contact-heading-hit-us-up, .contact-heading {
+  border-bottom: #FEAA3D 2px solid;
+}
+
+.contact-heading {
+  width: 50%;
+  padding-top: 20px;
+}
+
+.contact-text-field {
+  padding-bottom: 20px;
+}
+
+.contact-form-submit-button {
+  padding: 1.5%;
+  width: 50%;
+  margin-bottom: 10%;
 }
 }
