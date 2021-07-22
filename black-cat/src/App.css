@@ -544,54 +544,45 @@ body {
   .logo {
     height: 30px;
   }
+
   .navbar {
     height: 50px;
     width: 100%;
   }
+
   .navbar-container {
     background-color: transparent;
   }
+
   .home-container {
     width: 100vw;
     height: 100vh;
-    position: relative;
-    background-image: none;
-  }
-
-  .mobile-hero-image-section {
-    width: 100vw;
-    height: 45vh;
-    position: absolute;
-    top: 0;
-    display: block;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url(./images/hero-image.png);
-    background-repeat: no-repeat;
-    background-size:  cover;
-    background-position: center; 
+    background-position: left; 
   }
 
   .home-page-text-slogan-container {
-    width: 100vw;
+    width: 95vw;
     text-align: center;
     height: auto;
-    position: absolute;
-    top: 400px;
   }
+
   .home-page-text-slogan {
-    font-size: 1.5rem;
-    color: #000;
-    font-weight: normal;
+    font-size: 1.6rem;
+    color: #fff;
   }
+
   .navbar-links-container {
     flex-direction: column;
     background-color: #121212;
     width: 100vw;
     position: relative;
   }
+
   .navbar-link {
     font-size: 1rem;
 
   }
+
   #mobile-contact-button {
     display: block;
     background-color: #FEAA3D;
@@ -602,6 +593,8 @@ body {
     padding: 2.5%;
     border-radius: 5px;
     font-family: 'Metropolis semi-bold';
+    font-size: 0.9rem;
+    margin-top: 10%;
 }
 
 .black-cat {
@@ -619,7 +612,6 @@ body {
 .about-text  {
   padding-top: 5%;
   width: 90%;
-  font-size: 0.9rem;
 }
 
 .about-photo {
@@ -641,7 +633,7 @@ body {
 }
 
 .services-card {
-  width: 70%;
+  width: 80%;
   height: 150px;
   margin-bottom: 10%;
 }
@@ -678,7 +670,7 @@ body {
 
 .contact-heading-hit-us-up{
   width: 50%;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-top: 20%;
   margin-bottom: 0;
 }
@@ -700,5 +692,6 @@ body {
   padding: 2%;
   width: 50%;
   margin-bottom: 10%;
+  font-size: 0.9rem;
 }
 }
