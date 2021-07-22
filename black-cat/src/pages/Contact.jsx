@@ -56,7 +56,7 @@ const Contact = () => {
         toast.dark('✅ Success, message sent!') 
          e.target.reset();
       }).catch(error => {
-          toast.error('Oops! We ecountered a problem. Please try again.') 
+          toast.error('We ecountered a problem. Please try again.') 
       });
 }
 
@@ -64,20 +64,7 @@ const Contact = () => {
 
     return (
         <div className="section" id="contact"> 
-        <div className="contact-us-information-container">
-        <img className="contact-image" src={contactImage} alt="sound system" />
-        <h6 className="contact-heading">Contact</h6>
-        <p className="contact-text">contact@blackcatsoundsystem.com</p>
-        <p className="contact-text">(954)873-1170</p>
-        <div className="contact-icon-container">
-        <Link to={{ pathname: "https://www.facebook.com/blackcatsoundsystems/"}} target="_blank" style={{color: "#000"}}>
-        <FacebookIcon className="contact-icon"/>
-        </Link>
-        <Link to={{ pathname: "https://www.instagram.com/blackcatsoundsystem"}} target="_blank" style={{color: "#000"}}>
-        <InstagramIcon className="contact-icon"/>
-        </Link>
-        </div>
-        </div>           
+      
         <Card className="contact-us-form-container" variant="outlined">
             <h1 className="contact-heading-hit-us-up">Hit Us Up</h1>
             <CardContent>
@@ -130,7 +117,7 @@ const Contact = () => {
           label="Your message"
           fullWidth
           multiline
-          rows={5}
+          rows={6}
           variant="filled"
           required
           name="message"
@@ -152,6 +139,20 @@ const Contact = () => {
         draggable
         pauseOnHover={false}
         />
+          <div className="contact-us-information-container">
+        <img className="contact-image" src={contactImage} alt="sound system" />
+        <h6 className="contact-heading">Contact</h6>
+        <p className="contact-text">contact@blackcatsoundsystem.com</p>
+        <p className="contact-text">(954)873-1170</p>
+        <div className="contact-icon-container">
+        <Link to={{ pathname: "https://www.facebook.com/blackcatsoundsystems/"}} target="_blank" style={{color: "#000"}}>
+        <FacebookIcon className="contact-icon"/>
+        </Link>
+        <Link to={{ pathname: "https://www.instagram.com/blackcatsoundsystem"}} target="_blank" style={{color: "#000"}}>
+        <InstagramIcon className="contact-icon"/>
+        </Link>
+        </div>
+        </div>           
     </div>
     )
 }
