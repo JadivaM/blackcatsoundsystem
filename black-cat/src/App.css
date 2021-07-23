@@ -19,15 +19,16 @@ body {
   font-family: 'Metropolis regular';
 }
 
-.logo {
-  height: 60px;
-}
 
 .App {
   overflow-x: hidden;
 }
 
 .mobile-hero-image-section {
+  display: none;
+}
+
+.menu-icon {
   display: none;
 }
 
@@ -43,19 +44,32 @@ body {
   transition: 0.2s;
 }
 
+.nav {
+  width: 100vw;
+  height: 60px;
+}
+
+.logo {
+  width: 80%;
+  height: 60px;
+}
+
 .navbar-container.active {
   background-color: #121212;
+  width: 100%;
 }
 
-.navbar {
-  width: 80%;
-  height: 75px;
+
+.nav-options {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  align-items: center;
 }
+
 
 .navbar-links-container {
-  display: flex;
   width: 100%;
-  justify-content: flex-end;
   color: #fff;
 }
 
@@ -272,7 +286,7 @@ body {
   .logo {
     height: 50px;
   }
-  .navbar {
+  .nav {
     width: 90%;
     height: 65px;
   }
@@ -351,17 +365,20 @@ body {
     height: 42px;
   }
 
-  .navbar {
+  .nav {
     width: 90%;
     height: 60px;
   }
 
   .home-container {
-    background-position: center; 
+    background-position: left; 
   }
 
   .home-page-text-slogan {
     font-size: 2.5rem;
+  }
+  .home-page-text-slogan-container {
+    width: 80vw;
   }
 
   .black-cat {
@@ -452,6 +469,74 @@ body {
  }
 
 @media only screen and (max-width: 767.98px) {
+  .home-page-text-slogan {
+    font-size: 2.2rem;
+  }
+
+  .nav {
+    height: 50px;
+    width: 100%;
+  }
+
+  .navbar-container {
+    background-color: #121212;
+  }
+
+  .home-page-text-slogan-container {
+    width: 70vw;
+  }
+
+  .navbar-link {
+    display: flex;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.383);
+    width: 60vw;
+    margin: auto;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    margin: 30% 10px 0 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .nav-options {
+    display: flex;
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  .nav-options.active {
+    background: #121212;
+    right: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+    justify-content: flex-start;
+    padding-left: 0px;
+  }
+
+  .navbar-link:hover {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.383);
+  }
+
+  .home-container {
+    position: relative;
+    background-position: left; 
+  }
+
   .black-cat {
     top: -160px;
   }
@@ -472,12 +557,13 @@ body {
   .about-photo {
     display: flex;
     justify-content: center;
-    height: 450px;
+    height: 430px;
     width: 60%;
+    object-fit: contain;
   }
 
   .about-heading-text {
-    padding: 10% 0 7% 0;
+    padding: 12% 0 5% 0;
   }
 
   .services-cards-container {
@@ -545,19 +631,64 @@ body {
     height: 30px;
   }
 
-  .navbar {
+  .navbar-link {
+    display: flex;
+    align-items: center;
+    padding: 25px 0 25px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.383);
+    width: 60vw;
+    margin: auto;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    margin: 40% 10px 0 0;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .nav-options {
+    display: flex;
+    width: 70%;
+    height: 100vh;
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+  }
+
+  .nav-options.active {
+    background: #121212;
+    right: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+    justify-content: flex-start;
+    padding-left: 0px;
+  }
+
+  .navbar-link:hover {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.383);
+  }
+
+  .home-container {
+    position: relative;
+    background-position: left; 
+  }
+
+  .nav {
     height: 50px;
     width: 100%;
   }
 
   .navbar-container {
-    background-color: transparent;
-  }
-
-  .home-container {
-    width: 100vw;
-    height: 100vh;
-    background-position: left; 
+    background-color: #121212;
   }
 
   .home-page-text-slogan-container {
@@ -569,18 +700,6 @@ body {
   .home-page-text-slogan {
     font-size: 1.6rem;
     color: #fff;
-  }
-
-  .navbar-links-container {
-    flex-direction: column;
-    background-color: #121212;
-    width: 100vw;
-    position: relative;
-  }
-
-  .navbar-link {
-    font-size: 1rem;
-
   }
 
   #mobile-contact-button {
@@ -617,12 +736,13 @@ body {
 .about-photo {
   display: flex;
   justify-content: center;
-  height: 170px;
-  width: 70%;
+  height: 200px;
+  width: 80%;
+  object-fit: cover;
 }
 
 .about-heading-text {
-  padding: 15% 0 5% 0;
+  padding: 15% 0 3% 0;
   font-size: 1.5rem;
 }
 
