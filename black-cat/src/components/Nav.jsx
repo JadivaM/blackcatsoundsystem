@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
-import logo from '../images/logo.png';
-import { Navbar, Nav} from "react-bootstrap";
+import { ReactComponent as Logo } from '../images/logo.svg';
+import { ReactComponent as MenuIcon } from '../images/Hamburger_icon.svg';
+import { ReactComponent as CloseMenu } from '../images/white-cross.svg';
 import { NavHashLink as Link } from "react-router-hash-link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = () => {
+
 const [navbar, setNavbar] = useState(false);
+const [click, setClick] = useState(false);
+const handleClick = () => setClick(!click);
+const closeMobileMenu = () => setClick(false);
 
 const changeBackground = () => {
     if (window.scrollY >= 150){
@@ -18,39 +21,48 @@ const changeBackground = () => {
 
 window.addEventListener("scroll", changeBackground);
 
-
     return (
         <div className={navbar ? "navbar-container active" : "navbar-container"}>
-          <Navbar
-        collapseOnSelect
-        expand="lg"
-        className="navbar"
-        bg="navbar"
-        variant="dark"
-      >
-        <Navbar.Brand href="/#home" id="brand">
-        <img src={logo} alt="business logo" className="logo"/>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav">
-        <FontAwesomeIcon icon={faBars}  color="white" size="lg" />
-        </Navbar.Toggle>
-        <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="navbar-links-container">
+        <div className="logo-container">
+        <Link smooth to="/#home" id='text-link'>
+        <Logo className="logo"/>
+        </Link>
+        </div>
+        <nav
+        className="nav">
+        
+        <div className="navbar-links-container">
+          <ul className={click ? "nav-options active" : "nav-options"}>
           <Link smooth to="/#home" id='text-link'>
-            <p className="navbar-link">Home</p>
+            <li className="navbar-link" onClick={closeMobileMenu}>Home</li>
             </Link>
+           
             <Link smooth to="/#about" id='text-link'>
-            <p className="navbar-link">About</p>
+            <li className="navbar-link" onClick={closeMobileMenu}>About</li>
+            
             </Link>
+          
             <Link smooth to="/#events" id='text-link'>
-            <p className="navbar-link">Services</p>
+            <li className="navbar-link" onClick={closeMobileMenu}>Services</li>
             </Link>
+          
+           
             <Link smooth to="/#contact" id='text-link'>
-            <p className="navbar-link">Contact</p>
+            <li className="navbar-link" onClick={closeMobileMenu}>Contact</li>
+          
             </Link>
-            </Nav> 
-          </Navbar.Collapse>
-          </Navbar>
+           
+          </ul>
+          
+            </div> 
+          </nav>
+          <div className="mobile-menu" onClick={handleClick}>
+          {click ? (
+              <CloseMenu className="menu-icon" />
+               ) : (
+              <MenuIcon className="menu-icon" />
+          )}
+        </div>
         </div>
     )
 }
