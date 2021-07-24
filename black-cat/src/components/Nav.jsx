@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { ReactComponent as Logo } from '../images/logo.svg';
+import Logo from '../images/logo.svg';
 import { ReactComponent as MenuIcon } from '../images/Hamburger_icon.svg';
 import { ReactComponent as CloseMenu } from '../images/white-cross.svg';
 import { NavHashLink as Link } from "react-router-hash-link";
@@ -25,7 +25,7 @@ window.addEventListener("scroll", changeBackground);
         <div className={navbar ? "navbar-container active" : "navbar-container"}>
         <div className="logo-container">
         <Link smooth to="/#home" id='text-link'>
-        <Logo className="logo"/>
+          <img  className="logo" src={Logo} alt="logo"/>
         </Link>
         </div>
         <nav
