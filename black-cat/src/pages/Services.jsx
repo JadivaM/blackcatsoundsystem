@@ -6,7 +6,7 @@ import musicIcon from '../images/song.svg';
 import soundsystem from '../images/soundsystem.png';
 import soundIcon from '../images/sound.svg';
 
-const Events = () => {
+const Services = () => {
     return (
         <div className="section" id="events">
             <img className="black-cat" src={cat} alt="black cat logo"/>
@@ -41,4 +41,4 @@ const Events = () => {
     )
 }
 
-export default Events
+export default Services;
