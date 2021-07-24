@@ -19,13 +19,8 @@ body {
   font-family: 'Metropolis regular';
 }
 
-
 .App {
   overflow-x: hidden;
-}
-
-.mobile-hero-image-section {
-  display: none;
 }
 
 .menu-icon {
@@ -46,19 +41,19 @@ body {
 
 .nav {
   width: 100vw;
-  height: 60px;
+  height: 50px;
 }
 
 .logo {
-  width: 80%;
-  height: 60px;
+  height: 50px;
+  width: 110px;
+  margin-left: 50px;
 }
 
 .navbar-container.active {
   background-color: #121212;
   width: 100%;
 }
-
 
 .nav-options {
   display: flex;
@@ -67,9 +62,8 @@ body {
   align-items: center;
 }
 
-
 .navbar-links-container {
-  width: 100%;
+  width: 98%;
   color: #fff;
 }
 
@@ -85,10 +79,9 @@ body {
 }
 
 .navbar-link:hover {
-  border-bottom: #FEAA3D 4px solid;
+  border-bottom: #FEAA3D 3px solid;
   cursor: pointer;
 }
-
 
 #text-link {
   color: inherit;
@@ -108,13 +101,8 @@ body {
   background-position: 0 55%; 
 }
 
-.mobile-hero-image-section {
-  display: block;
-}
-
-
 .home-page-text-slogan-container {
-  width: 50%;
+  width: 100%;
   height: 50%;
   display: flex;
   flex-direction: column;
@@ -125,7 +113,7 @@ body {
 
 .home-page-text-slogan {
   color: rgb(255, 255, 255);
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   font-weight: bolder;
   font-family: 'Metropolis semi-bold';
 }
@@ -284,36 +272,50 @@ body {
 
 @media screen and (max-device-width: 1600px) {
   .logo {
-    height: 50px;
+    height: 45px;
   }
+
+  .home-page-text-slogan-container {
+    width: 100%;
+  }
+
   .nav {
     width: 90%;
     height: 65px;
   }
+
   .navbar-container {
     background-color: transparent;
   }
+
   .home-container {
     background-position: center; 
   }
+
   .home-page-text-slogan {
     font-size: 3rem;
   }
+
   .navbar-link:hover {
     border-bottom: #FEAA3D 3px solid;
   }
+
   .about-heading-text {
     padding: 7% 0 7% 0;
   }
+
   .black-cat {
     top: -270px;
   }
+
   .about-photo, .about-text {
     width: 40%;
   }
+
   .about-photo {
     object-fit: cover;
   }
+
   .services-card {
     width: 25%;
     height: 150px;
@@ -362,7 +364,8 @@ body {
 
  @media only screen and (max-width: 991.98px) {
   .logo {
-    height: 42px;
+    height: 40px;
+    margin-left: 20px;
   }
 
   .nav {
@@ -377,8 +380,9 @@ body {
   .home-page-text-slogan {
     font-size: 2.5rem;
   }
+
   .home-page-text-slogan-container {
-    width: 80vw;
+    width: 100%;
   }
 
   .black-cat {
@@ -628,7 +632,8 @@ body {
 
 @media (max-width: 575.98px) {
   .logo {
-    height: 30px;
+    height: 35px;
+    margin: 5px;
   }
 
   .navbar-link {
@@ -709,10 +714,10 @@ body {
     border: none;
     color: #000;
     width: 130px;
-    padding: 2.5%;
+    padding: 4%;
     border-radius: 5px;
     font-family: 'Metropolis semi-bold';
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-top: 10%;
 }
 
