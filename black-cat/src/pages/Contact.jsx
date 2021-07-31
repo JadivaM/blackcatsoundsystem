@@ -10,6 +10,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { black } from '@material-ui/core/colors';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
 
 import {
     withStyles,
@@ -53,18 +54,17 @@ const Contact = () => {
     e.preventDefault();
     if(isValid === true)
       emailjs.sendForm('service_iaxno1t', 'template_17zqf7m', e.target, 'user_jMNc9Tqke5LnkXIe5lxiZ').then(res => {
-        toast.dark('✅ Success, message sent!') 
+        toast.dark('🔊🔊🔊 Message sent!') 
          e.target.reset();
       }).catch(error => {
           toast.error('We ecountered a problem. Please try again.') 
       });
 }
 
-
+AOS.init();
 
     return (
-        <div className="section" id="contact"> 
-      
+        <div data-aos="fade-up" className="section" id="contact">  
         <Card className="contact-us-form-container" variant="outlined">
             <h1 className="contact-heading-hit-us-up">Hit Us Up</h1>
             <CardContent>
@@ -105,11 +105,6 @@ const Contact = () => {
         variant="filled"
         onChange={checkEmail}
       /> }
-
-       
-
-        
-
         </div>
        <div className="contact-text-field message-field">
        <CssTextField
@@ -134,10 +129,12 @@ const Contact = () => {
         autoClose={10000}
         newestOnTop={false}
         closeOnClick
+        autoClose={10000}
+        hideProgressBar={false}
         rtl={false}
         pauseOnFocusLoss
         draggable
-        pauseOnHover={false}
+        pauseOnHover
         />
           <div className="contact-us-information-container">
         <img className="contact-image" src={contactImage} alt="sound system" />

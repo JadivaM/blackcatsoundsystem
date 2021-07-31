@@ -21,6 +21,7 @@ body {
 
 .App {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .menu-icon {
@@ -175,6 +176,7 @@ body {
 
 .about-photo {
   object-fit: contain;
+  height: 100%;
 }
 
 #events {
@@ -335,7 +337,8 @@ body {
   }
 
   .black-cat {
-    top: -270px;
+    top: -150px;
+    width: 15%;
   }
 
   .about-photo, .about-text {
@@ -343,7 +346,9 @@ body {
   }
 
   .about-photo {
-    object-fit: cover;
+    object-fit: contain;
+    height: 600px;
+    object-position: top;
   }
 
   .services-card {
@@ -454,11 +459,13 @@ body {
   }
 
   .home-container {
-    background-position: left; 
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/contact-image.jpg);
+    background-position: center; 
   }
 
   .home-page-text-slogan {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 
   .home-page-text-slogan-container {
@@ -555,7 +562,13 @@ body {
 
 @media only screen and (max-width: 767.98px) {
   .home-page-text-slogan {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
+  }
+
+  .home-container {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/contact-image.jpg);
+    background-position: center; 
   }
 
   .nav {
@@ -568,7 +581,7 @@ body {
   }
 
   .home-page-text-slogan-container {
-    width: 70vw;
+    width: 80vw;
   }
 
   .navbar-link {
@@ -615,11 +628,6 @@ body {
 
   .navbar-link:hover {
     border-bottom: 1px solid rgba(128, 128, 128, 0.383);
-  }
-
-  .home-container {
-    position: relative;
-    background-position: left; 
   }
 
   .black-cat {
@@ -766,8 +774,8 @@ body {
 
   .home-container {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(./images/hero-image.png);
-    background-position: left; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/contact-image.jpg);
+    background-position: center; 
   }
 
   .nav {
@@ -780,7 +788,7 @@ body {
   }
 
   .home-page-text-slogan-container {
-    width: 95vw;
+    width: 99vw;
     text-align: center;
     height: auto;
   }
@@ -797,7 +805,7 @@ body {
     border: none;
     color: #000;
     width: 140px;
-    padding: 4%;
+    padding: 5%;
     border-radius: 5px;
     font-family: 'Metropolis semi-bold';
     font-size: 0.95rem;
@@ -831,6 +839,7 @@ body {
   justify-content: center;
   height: 200px;
   width: 80%;
+  object-position: center;
   object-fit: cover;
 }
 
