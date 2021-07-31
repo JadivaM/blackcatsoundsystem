@@ -5,14 +5,18 @@ import CardContent from '@material-ui/core/CardContent';
 import musicIcon from '../images/song.svg';
 import soundsystem from '../images/soundsystem.png';
 import soundIcon from '../images/sound.svg';
+import AOS from 'aos';
 
 const Services = () => {
+
+    AOS.init();
+
     return (
         <div className="section" id="events">
-            <img className="black-cat" src={cat} alt="black cat logo"/>
+            <img className="black-cat" src={cat} alt="black cat logo" />
             <h2 className="about-heading-text">What We Offer</h2>
             <div className="services-cards-container">
-            <Card className="services-card" variant="outlined">
+            <Card data-aos="fade-up" className="services-card" variant="outlined">
                 <CardContent>
                 <img className="card-icon" src={soundsystem} alt="icon"/>
                 <p className="card-text">
@@ -20,7 +24,7 @@ const Services = () => {
                 </p>
                 </CardContent>
             </Card>
-            <Card className="services-card" variant="outlined">
+            <Card data-aos="fade-up" className="services-card" variant="outlined">
                 <CardContent>
                 <img className="card-icon" src={musicIcon} alt="icon"/>
                 <p className="card-text">
@@ -28,7 +32,7 @@ const Services = () => {
                 </p>
                 </CardContent>
             </Card>
-            <Card className="services-card" variant="outlined">
+            <Card data-aos="fade-up" className="services-card" variant="outlined">
                 <CardContent>
                 <img className="card-icon" src={soundIcon} alt="icon"/>
                 <p className="card-text">
