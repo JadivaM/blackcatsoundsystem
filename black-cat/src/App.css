@@ -308,7 +308,7 @@ body {
 }
 
 .contact-form-submit-button {
-  background-color: #FEAA3D;
+  background-color: #FEAA3D;;
   box-shadow: none;
   border: none;
   color: #000;
@@ -317,6 +317,16 @@ body {
   border-radius: 5px;
   font-family: 'Metropolis semi-bold';
   margin: auto;
+}
+
+.contact-form-submit-button.loading-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-submit-button:active {
+  background-color: #f39315;
 }
 
 .section {
@@ -837,6 +847,10 @@ body {
     -o-animation: fadeIn linear 2s;
     -ms-animation: fadeIn linear 2s;
   }
+
+#mobile-contact-button:active {
+  background-color: #f39315;
+}
 
 .black-cat {
   display: none;
