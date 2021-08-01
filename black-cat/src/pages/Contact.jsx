@@ -38,7 +38,6 @@ import {
 
 
 const Contact = () => {
-
   const [isValid, setIsValid] = useState(true);
 
   const checkEmail = (e) => {
@@ -119,7 +118,7 @@ AOS.init();
         />
        </div>
        <CardActions>
-        <button type="submit" className="contact-form-submit-button">Send message</button>
+        <button type="submit" className="contact-form-submit-button">Send</button>
       </CardActions>
         </form>
       </CardContent>

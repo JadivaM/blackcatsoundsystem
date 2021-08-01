@@ -24,6 +24,21 @@ body {
   overflow-y: hidden;
 }
 
+.loading-gif-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-gif {
+  object-fit: contain;
+  width: 50vw;
+  height: 50vh;
+}
+
 .menu-icon {
   display: none;
 }
@@ -71,7 +86,7 @@ body {
   margin: 10px;
   font-size: 1rem;
   font-family: 'Metropolis semi-bold';
-  border-bottom: 3px solid transparent;
+  border-bottom: 3.5px solid transparent;
   text-decoration: none;
   width: 100px;
   text-align: center;
@@ -80,7 +95,7 @@ body {
 }
 
 .navbar-link:hover {
-  border-bottom: #FEAA3D 3px solid;
+  border-bottom: #FEAA3D 3.5px solid;
   cursor: pointer;
 }
 
@@ -90,6 +105,7 @@ body {
 }
 
 .home-container {
+  background-color: #121212;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -100,6 +116,11 @@ body {
   background-size: cover;
   position: relative;
   background-position: 0 55%; 
+  animation: fadeIn linear 2s;
+  -webkit-animation: fadeIn linear 2s;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
 }
 
 .home-page-text-slogan-container {
@@ -125,28 +146,28 @@ body {
 }
 
 @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {  filter: brightness(30%); }
+  100% {  filter: brightness(100%); }
 }
 
 @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {  filter: brightness(30%); }
+  100% {  filter: brightness(100%); }
 }
 
 @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {  filter: brightness(30%); }
+  100% {  filter: brightness(100%); }
 }
 
 @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {  filter: brightness(30%); }
+  100% {  filter: brightness(100%); }
 }
 
 @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  0% {  filter: brightness(30%); }
+  100% {  filter: brightness(100%); }
 }
 
 #mobile-contact-button {
@@ -774,7 +795,7 @@ body {
 
   .home-container {
     position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/contact-image.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.3)), url(./images/contact-image.jpg);
     background-position: center; 
   }
 
@@ -801,7 +822,7 @@ body {
   #mobile-contact-button {
     display: block;
     background-color: #FEAA3D;
-    box-shadow: none;
+    box-shadow: 0 10px 25px -5px rgba(0 0 0 / .10), 0 10px 10px -5px rgba(0 0 0 / .04);
     border: none;
     color: #000;
     width: 140px;
