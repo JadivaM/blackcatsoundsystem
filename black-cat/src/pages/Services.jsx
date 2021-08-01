@@ -16,7 +16,7 @@ const Services = () => {
             <img className="black-cat" src={cat} alt="black cat logo" />
             <h2 className="about-heading-text">What We Offer</h2>
             <div className="services-cards-container">
-            <Card data-aos="fade-up" className="services-card" variant="outlined">
+            <Card  data-aos="fade-up"  data-aos-offset="20" className="services-card" variant="outlined">
                 <CardContent>
                 <img className="card-icon" src={soundsystem} alt="icon"/>
                 <p className="card-text">
@@ -24,7 +24,7 @@ const Services = () => {
                 </p>
                 </CardContent>
             </Card>
-            <Card data-aos="fade-up" className="services-card" variant="outlined">
+            <Card  data-aos="fade-up"  data-aos-offset="20" className="services-card" variant="outlined">
                 <CardContent>
                 <img className="card-icon" src={musicIcon} alt="icon"/>
                 <p className="card-text">
@@ -32,7 +32,7 @@ const Services = () => {
                 </p>
                 </CardContent>
             </Card>
-            <Card data-aos="fade-up" className="services-card" variant="outlined">
+            <Card  data-aos="fade-up"  data-aos-offset="20" className="services-card" variant="outlined">
                 <CardContent>
                 <img className="card-icon" src={soundIcon} alt="icon"/>
                 <p className="card-text">
