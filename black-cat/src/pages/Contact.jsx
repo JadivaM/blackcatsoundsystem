@@ -8,6 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import CardActions from '@material-ui/core/CardActions';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { black } from '@material-ui/core/colors';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
@@ -20,6 +21,9 @@ import {
   const CssTextField = withStyles({
     root: {
         '& label.Mui-focused': {
+            color: 'black',
+          },
+          '& MuiCircularProgress-circle': {
             color: 'black',
           },
           '& .MuiFilledInput-underline:after': {
@@ -39,6 +43,7 @@ import {
 
 const Contact = () => {
   const [isValid, setIsValid] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const checkEmail = (e) => {
     const emailValid = e.target.value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
@@ -51,10 +56,12 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
     if(isValid === true)
       emailjs.sendForm('service_iaxno1t', 'template_17zqf7m', e.target, 'user_jMNc9Tqke5LnkXIe5lxiZ').then(res => {
         toast.dark('🔊🔊🔊 Message sent!') 
-         e.target.reset();
+        setLoading(false);
+        e.target.reset();
       }).catch(error => {
           toast.error('We ecountered a problem. Please try again.') 
       });
@@ -118,7 +125,16 @@ AOS.init();
         />
        </div>
        <CardActions>
-        <button type="submit" className="contact-form-submit-button">Send</button>
+         {loading ? (
+          <button type="submit" className="contact-form-submit-button loading-button">
+            <CircularProgress style={{color: 'black'}} size={20} />
+          </button>
+         ) : 
+         (
+          <button type="submit" className="contact-form-submit-button">
+           Send
+          </button> )}
+        
       </CardActions>
         </form>
       </CardContent>
